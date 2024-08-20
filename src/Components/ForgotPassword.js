@@ -25,6 +25,7 @@ const ForgotPassword = () => {
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className="border rounded-lg w-96 h-12 p-2 mt-2"
         />
       </div>
       <div>
@@ -33,9 +34,9 @@ const ForgotPassword = () => {
           placeholder="Enter new password"
           value={newPassword}
           onChange={(e) => setNewPassword(e.target.value)}
+          className="border rounded-lg w-96 h-12 p-2 mt-2"
         />
       </div>
-
       <button onClick={handleResetPassword}>Reset Password</button>
     </div>
   );
