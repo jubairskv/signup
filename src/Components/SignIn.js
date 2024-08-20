@@ -24,6 +24,7 @@ const SignIn = () => {
             onChange={(e) =>
               setInput({ ...input, [e.target.name]: e.target.value })
             }
+            className="border"
           />
         </div>
         <div>
@@ -36,10 +37,11 @@ const SignIn = () => {
             onChange={(e) =>
               setInput({ ...input, [e.target.name]: e.target.value })
             }
+            className="border"
           />
         </div>
         <div>
-          <button>Login</button>
+          <button type="submit" className="border">Login</button>
         </div>
         <div>
           <p>
