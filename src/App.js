@@ -4,6 +4,7 @@ import SignIn from "./Components/SignIn";
 import Signup from "./Components/Signup";
 import Body from "./Components/Body";
 import ForgotPassword from "./Components/ForgotPassword";
+import ProtectRoute from "./Components/ProtectRoute";
 
 function App() {
   const appRouter = createBrowserRouter([
@@ -17,7 +18,13 @@ function App() {
     },
     {
       path: "/home",
-      element: <Body />,
+      element: <ProtectRoute />,
+      children:[
+        {
+          path:"/home",
+          element:<Body/>
+        }
+      ]
     },
     {
       path: "forgotpassword",
