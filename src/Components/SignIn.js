@@ -33,7 +33,9 @@ const SignIn = () => {
         <div className="pt-8">
           <form onSubmit={handleSubmit}>
             <div className="flex flex-col">
-              <label className="pr-36 font-medium text-base">Email : </label>
+              <label className="pr-36 font-medium text-base">
+                Email <span class="text-red-500">*</span>{" "}
+              </label>
               <input
                 type="text"
                 name="email"
@@ -46,7 +48,9 @@ const SignIn = () => {
               />
             </div>
             <div className="flex flex-col pt-2">
-              <label className="pr-28 font-medium text-base">Password : </label>
+              <label className="pr-28 font-medium text-base">
+                Password <span class="text-red-500">*</span>
+              </label>
               <input
                 type="text"
                 name="password"
@@ -60,7 +64,10 @@ const SignIn = () => {
             </div>
             <div className="flex gap-28 mt-4 text-nowrap">
               <p>Remember Me</p>
-              <Link className="flex text-blue-800 font-medium" to="/forgotpassword">
+              <Link
+                className="flex text-blue-800 font-medium"
+                to="/forgotpassword"
+              >
                 Forgot your password ?
               </Link>
             </div>
@@ -90,7 +97,9 @@ const SignIn = () => {
               <p className="flex gap-2 ">
                 Don't have an account?
                 <Link to="/signup">
-                  <h6 className="underline text-blue-800 font-medium">Register here</h6>
+                  <h6 className="underline text-blue-800 font-medium">
+                    Register here
+                  </h6>
                 </Link>
               </p>
             </div>
