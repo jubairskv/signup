@@ -27,7 +27,7 @@ function App() {
       ]
     },
     {
-      path: "forgotpassword",
+      path: "/forgotpassword",
       element: <ForgotPassword />,
     },
   ]);

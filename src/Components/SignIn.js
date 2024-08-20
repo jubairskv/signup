@@ -64,6 +64,14 @@ const SignIn = () => {
             </Link>
           </p>
         </div>
+        <div>
+          <p>
+            Forgot your password?
+            <Link to="/forgotpassword">
+              <h6>Reset Here</h6>
+            </Link>
+          </p>
+        </div>
       </form>
     </div>
   );
