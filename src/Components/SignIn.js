@@ -79,6 +79,11 @@ const SignIn = () => {
                 Login
               </button>
             </div>
+            <div className="flex">
+              <hr className="w-32 mt-10" />
+              <span className="mx-4 mt-7 text-nowrap text-gray-500">Or, Login With</span>
+              <hr className="w-32 mt-10 " />
+            </div>
 
             <div className="mt-8 flex items-center">
               <img
