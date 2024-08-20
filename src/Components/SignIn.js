@@ -17,6 +17,8 @@ const SignIn = () => {
     ) {
       localStorage.setItem("loggin", true);
       navigate("/home");
+    } else {
+      alert("Wrong Email or Password");
     }
   };
   return (
