@@ -10,7 +10,7 @@ const SignIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const loggedUser = JSON.parse(localStorage.getItemItem("user"));
+    const loggedUser = JSON.parse(localStorage.getItem("user"));
     if (
       input.email === loggedUser.email &&
       input.password === loggedUser.password
