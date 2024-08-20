@@ -23,11 +23,11 @@ const SignIn = () => {
   };
   return (
     <div className="flex flex-row">
-      <div className="pl-36 pt-32">
+      <div className="pl-40 pt-32">
         <div>
-          <h1 className="font-bold text-4xl">Welcome back !</h1>
-          <p className="pt-2">
-            Enter to get unlimited access to data & information
+          <h1 className="font-bold text-4xl">Create Account !</h1>
+          <p className="pt-2 text-gray-500">
+            Let's get your account set up
           </p>
         </div>
         <div className="pt-8">
@@ -93,13 +93,13 @@ const SignIn = () => {
               />
               <button
                 type="submit"
-                className="border bg-white rounded-lg  w-96 h-12 text-black"
+                className="border bg-white rounded-lg  w-96 h-12 text-black font-medium"
               >
                 Sign up with google
               </button>
             </div>
             <div className="ml-16 mt-8">
-              <p className="flex gap-2 ">
+              <p className="flex gap-2 text-gray-600">
                 Don't have an account?
                 <Link to="/signup">
                   <h6 className="underline text-blue-800 font-medium">

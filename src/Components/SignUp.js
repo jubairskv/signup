@@ -18,10 +18,10 @@ const Signup = () => {
 
   return (
     <div className="flex flex-row">
-      <div className="pl-36 pt-24">
+      <div className="pl-40 pt-24">
         <div>
           <h1 className="font-bold text-4xl">Welcome back !</h1>
-          <p className="pt-2">
+          <p className="pt-2 text-gray-600">
             Enter to get unlimited access to data & information
           </p>
         </div>
@@ -105,15 +105,15 @@ const Signup = () => {
               />
               <button
                 type="submit"
-                className="border bg-white rounded-lg  w-96 h-12 text-black"
+                className="border bg-white rounded-lg  w-96 h-12 text-black font-medium"
               >
                 Sign up with google
               </button>
             </div>
             <div className="ml-16 mt-8 text-nowrap">
-              <p className="flex gap-2 ">
+              <p className="flex gap-2  text-gray-500">
                 Have already an account
-                <Link to="/signup">
+                <Link to="/">
                   <h6 className="underline text-blue-800 font-medium">Login</h6>
                 </Link>
               </p>
