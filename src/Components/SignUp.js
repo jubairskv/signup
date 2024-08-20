@@ -1,23 +1,26 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [input, setInput] = useState({
-    name:"",
+    name: "",
     email: "",
     password: "",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    localStorage.setItem(JSON.stringify(input));
+    navigate("/")
   };
 
   return (
     <div>
       <h1>Sign up</h1>
       <form onSubmit={handleSubmit}>
-      <div>
+        <div>
           <label>Name : </label>
           <input
             type="text"

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignIn = () => {
+  const navigate = useNavigate();
   const [input, setInput] = useState({
     email: "",
     password: "",
@@ -9,6 +10,14 @@ const SignIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const loggedUser = JSON.parse(localStorage.getItemItem("user"));
+    if (
+      input.email === loggedUser.email &&
+      input.password === loggedUser.password
+    ) {
+      localStorage.setItem("loggin", true);
+      navigate("/home");
+    }
   };
   return (
     <div>
@@ -41,7 +50,9 @@ const SignIn = () => {
           />
         </div>
         <div>
-          <button type="submit" className="border">Login</button>
+          <button type="submit" className="border">
+            Login
+          </button>
         </div>
         <div>
           <p>
