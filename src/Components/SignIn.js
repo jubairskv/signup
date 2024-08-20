@@ -23,9 +23,9 @@ const SignIn = () => {
   };
   return (
     <div className="flex flex-row">
-      <div className="pl-32 pt-32">
+      <div className="pl-36 pt-32">
         <div>
-          <h1 className="font-bold text-4xl">Welcome back!</h1>
+          <h1 className="font-bold text-4xl">Welcome back !</h1>
           <p className="pt-2">
             Enter to get unlimited access to data & information
           </p>
@@ -46,7 +46,7 @@ const SignIn = () => {
               />
             </div>
             <div className="flex flex-col pt-2">
-              <label className="pr-28 font-medium text-base">password : </label>
+              <label className="pr-28 font-medium text-base">Password : </label>
               <input
                 type="text"
                 name="password"
@@ -58,14 +58,11 @@ const SignIn = () => {
                 className="border rounded-lg  w-96 h-12 p-2 mt-2"
               />
             </div>
-            <div className="flex gap-10 mt-4">
+            <div className="flex gap-28 mt-4 text-nowrap">
               <p>Remember Me</p>
-              <p className="flex">
+              <Link className="flex text-blue-800 font-medium" to="/forgotpassword">
                 Forgot your password ?
-                <Link to="/forgotpassword">
-                  <h6>Reset Here</h6>
-                </Link>
-              </p>
+              </Link>
             </div>
             <div className="mt-8">
               <button
@@ -76,7 +73,12 @@ const SignIn = () => {
               </button>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-8 flex items-center">
+              <img
+                src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000"
+                alt="icon"
+                className="w-7 h-7 absolute ml-20"
+              />
               <button
                 type="submit"
                 className="border bg-white rounded-lg  w-96 h-12 text-black"
@@ -85,19 +87,17 @@ const SignIn = () => {
               </button>
             </div>
             <div className="ml-16 mt-8">
-              <p className="flex">
+              <p className="flex gap-2 ">
                 Don't have an account?
                 <Link to="/signup">
-                  <h6>Register here</h6>
+                  <h6 className="underline text-blue-800 font-medium">Register here</h6>
                 </Link>
               </p>
             </div>
           </form>
         </div>
       </div>
-      <div className="bg-black border w-10 l-10">
-        hi
-      </div>
+      <div className="bg-blue-800 border w-screen h-svh ml-96"></div>
     </div>
   );
 };
