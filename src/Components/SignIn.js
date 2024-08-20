@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
   const [input, setInput] = useState({
@@ -14,29 +15,39 @@ const SignIn = () => {
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Email</label>
+          <label>Email : </label>
           <input
             type="text"
-            value={input}
+            name="email"
+            value={input.email}
             placeholder="Enter the email"
             onChange={(e) =>
-              setInput({ ...input, [e.target.email]: e.target.value })
+              setInput({ ...input, [e.target.name]: e.target.value })
             }
           />
         </div>
         <div>
-          <label>password</label>
+          <label>password : </label>
           <input
             type="text"
-            value={input}
+            name="password"
+            value={input.password}
             placeholder="Enter the password"
             onChange={(e) =>
-              setInput({ ...input, [e.target.password]: e.target.value })
+              setInput({ ...input, [e.target.name]: e.target.value })
             }
           />
         </div>
         <div>
           <button>Login</button>
+        </div>
+        <div>
+          <p>
+            Don't have an account?
+            <Link to="/signup">
+              <h6>Sign up</h6>
+            </Link>
+          </p>
         </div>
       </form>
     </div>
