@@ -37,7 +37,12 @@ const ForgotPassword = () => {
           className="border rounded-lg w-96 h-12 p-2 mt-2"
         />
       </div>
-      <button onClick={handleResetPassword}>Reset Password</button>
+      <button
+        onClick={handleResetPassword}
+        className="border bg-blue-700 rounded-lg shadow-lg w-96 h-12 text-white"
+      >
+        Reset Password
+      </button>
     </div>
   );
 };
